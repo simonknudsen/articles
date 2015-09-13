@@ -1,0 +1,23 @@
+File 
+Index-2015-09-12 114041368.csv 
+from 
+https://www.qv.co.nz/resources/residential-house-price-index
+
+
+File 
+hc1.xls
+from 
+http://www.rbnz.govt.nz/statistics/tables/c1/
+
+
+File 
+graphdata.xls
+from
+http://www.rbnz.govt.nz/statistics/key_graphs/house_prices_values/
+
+
+
+File 
+graphdata_inflation.xls
+from 
+http://www.rbnz.govt.nz/statistics/key_graphs/inflation/
