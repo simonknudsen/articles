@@ -1,0 +1,453 @@
+<html xmlns:x="urn:schemas-microsoft-com:office:excel">
+	<head>
+		<meta http-equiv="Content-Type" content="charset=windows-1252" />
+		<!--[if gte mso 9]>
+		<xml>
+			<x:ExcelWorkbook>
+				<x:ExcelWorksheets>
+					<x:ExcelWorksheet>
+						<x:Name>matrix</x:Name>
+						<x:WorksheetOptions>
+							<x:Print>
+								<x:ValidPrinterInfo/>
+							</x:Print>
+						</x:WorksheetOptions>
+					</x:ExcelWorksheet>
+				</x:ExcelWorksheets>
+			</x:ExcelWorkbook>
+		</xml>
+		<![endif]-->
+	</head>
+	<body>
+		<style>
+			.stub1 {
+				mso-style-parent:style0;
+				mso-number-format:\@;
+				vertical-align:middle;
+			}
+			.headfirst {
+				mso-style-parent:style0;
+				mso-number-format:\@;
+			}
+			.headlast {
+				mso-style-parent:style0;
+				mso-number-format:\@;
+			}
+			.headmid {
+				mso-style-parent:style0;
+				mso-number-format:\@;
+			}
+			.title
+				mso-style-parent:style0;
+				text-align:left;
+			}
+		</style>
+<table class="pxtable" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<th colspan="2">Estimated Resident Population (Mean Quarter Ended) by Sex (1991+) (Qrtly-Mar/Jun/Sep/Dec)</th>
+	</tr>
+	<tr>
+		<td class="headfirst" colspan="1" rowspan="1">&nbsp;</td>
+		<th class="headfirst" colspan="1">Total</th>
+	</tr>
+	<tr>
+		<td class="stub1">1991Q1</td>
+		<td style="white-space: nowrap;">3,481,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">1991Q2</td>
+		<td style="white-space: nowrap;">3,491,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">1991Q3</td>
+		<td style="white-space: nowrap;">3,499,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">1991Q4</td>
+		<td style="white-space: nowrap;">3,510,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">1992Q1</td>
+		<td style="white-space: nowrap;">3,521,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">1992Q2</td>
+		<td style="white-space: nowrap;">3,529,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">1992Q3</td>
+		<td style="white-space: nowrap;">3,535,600</td>
+	</tr>
+	<tr>
+		<td class="stub1">1992Q4</td>
+		<td style="white-space: nowrap;">3,545,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">1993Q1</td>
+		<td style="white-space: nowrap;">3,558,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">1993Q2</td>
+		<td style="white-space: nowrap;">3,568,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">1993Q3</td>
+		<td style="white-space: nowrap;">3,577,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">1993Q4</td>
+		<td style="white-space: nowrap;">3,590,400</td>
+	</tr>
+	<tr>
+		<td class="stub1">1994Q1</td>
+		<td style="white-space: nowrap;">3,604,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">1994Q2</td>
+		<td style="white-space: nowrap;">3,615,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">1994Q3</td>
+		<td style="white-space: nowrap;">3,625,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">1994Q4</td>
+		<td style="white-space: nowrap;">3,640,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">1995Q1</td>
+		<td style="white-space: nowrap;">3,656,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1995Q2</td>
+		<td style="white-space: nowrap;">3,668,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">1995Q3</td>
+		<td style="white-space: nowrap;">3,681,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1995Q4</td>
+		<td style="white-space: nowrap;">3,697,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">1996Q1</td>
+		<td style="white-space: nowrap;">3,715,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1996Q2</td>
+		<td style="white-space: nowrap;">3,727,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">1996Q3</td>
+		<td style="white-space: nowrap;">3,738,800</td>
+	</tr>
+	<tr>
+		<td class="stub1">1996Q4</td>
+		<td style="white-space: nowrap;">3,753,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">1997Q1</td>
+		<td style="white-space: nowrap;">3,768,800</td>
+	</tr>
+	<tr>
+		<td class="stub1">1997Q2</td>
+		<td style="white-space: nowrap;">3,778,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">1997Q3</td>
+		<td style="white-space: nowrap;">3,786,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">1997Q4</td>
+		<td style="white-space: nowrap;">3,797,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1998Q1</td>
+		<td style="white-space: nowrap;">3,807,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1998Q2</td>
+		<td style="white-space: nowrap;">3,813,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">1998Q3</td>
+		<td style="white-space: nowrap;">3,818,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1998Q4</td>
+		<td style="white-space: nowrap;">3,825,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">1999Q1</td>
+		<td style="white-space: nowrap;">3,831,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">1999Q2</td>
+		<td style="white-space: nowrap;">3,834,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">1999Q3</td>
+		<td style="white-space: nowrap;">3,838,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">1999Q4</td>
+		<td style="white-space: nowrap;">3,846,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">2000Q1</td>
+		<td style="white-space: nowrap;">3,853,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">2000Q2</td>
+		<td style="white-space: nowrap;">3,856,800</td>
+	</tr>
+	<tr>
+		<td class="stub1">2000Q3</td>
+		<td style="white-space: nowrap;">3,861,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2000Q4</td>
+		<td style="white-space: nowrap;">3,869,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2001Q1</td>
+		<td style="white-space: nowrap;">3,874,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2001Q2</td>
+		<td style="white-space: nowrap;">3,878,400</td>
+	</tr>
+	<tr>
+		<td class="stub1">2001Q3</td>
+		<td style="white-space: nowrap;">3,887,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2001Q4</td>
+		<td style="white-space: nowrap;">3,905,800</td>
+	</tr>
+	<tr>
+		<td class="stub1">2002Q1</td>
+		<td style="white-space: nowrap;">3,925,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2002Q2</td>
+		<td style="white-space: nowrap;">3,942,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">2002Q3</td>
+		<td style="white-space: nowrap;">3,958,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2002Q4</td>
+		<td style="white-space: nowrap;">3,978,600</td>
+	</tr>
+	<tr>
+		<td class="stub1">2003Q1</td>
+		<td style="white-space: nowrap;">4,001,400</td>
+	</tr>
+	<tr>
+		<td class="stub1">2003Q2</td>
+		<td style="white-space: nowrap;">4,020,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2003Q3</td>
+		<td style="white-space: nowrap;">4,035,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2003Q4</td>
+		<td style="white-space: nowrap;">4,053,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">2004Q1</td>
+		<td style="white-space: nowrap;">4,070,200</td>
+	</tr>
+	<tr>
+		<td class="stub1">2004Q2</td>
+		<td style="white-space: nowrap;">4,083,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">2004Q3</td>
+		<td style="white-space: nowrap;">4,094,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">2004Q4</td>
+		<td style="white-space: nowrap;">4,107,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">2005Q1</td>
+		<td style="white-space: nowrap;">4,120,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">2005Q2</td>
+		<td style="white-space: nowrap;">4,130,200</td>
+	</tr>
+	<tr>
+		<td class="stub1">2005Q3</td>
+		<td style="white-space: nowrap;">4,139,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2005Q4</td>
+		<td style="white-space: nowrap;">4,153,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">2006Q1</td>
+		<td style="white-space: nowrap;">4,168,500</td>
+	</tr>
+	<tr>
+		<td class="stub1">2006Q2</td>
+		<td style="white-space: nowrap;">4,180,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2006Q3</td>
+		<td style="white-space: nowrap;">4,190,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2006Q4</td>
+		<td style="white-space: nowrap;">4,202,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2007Q1</td>
+		<td style="white-space: nowrap;">4,214,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2007Q2</td>
+		<td style="white-space: nowrap;">4,221,600</td>
+	</tr>
+	<tr>
+		<td class="stub1">2007Q3</td>
+		<td style="white-space: nowrap;">4,229,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2007Q4</td>
+		<td style="white-space: nowrap;">4,240,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2008Q1</td>
+		<td style="white-space: nowrap;">4,250,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2008Q2</td>
+		<td style="white-space: nowrap;">4,257,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2008Q3</td>
+		<td style="white-space: nowrap;">4,264,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2008Q4</td>
+		<td style="white-space: nowrap;">4,274,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2009Q1</td>
+		<td style="white-space: nowrap;">4,286,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2009Q2</td>
+		<td style="white-space: nowrap;">4,298,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2009Q3</td>
+		<td style="white-space: nowrap;">4,309,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2009Q4</td>
+		<td style="white-space: nowrap;">4,324,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2010Q1</td>
+		<td style="white-space: nowrap;">4,338,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2010Q2</td>
+		<td style="white-space: nowrap;">4,348,200</td>
+	</tr>
+	<tr>
+		<td class="stub1">2010Q3</td>
+		<td style="white-space: nowrap;">4,356,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2010Q4</td>
+		<td style="white-space: nowrap;">4,368,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2011Q1</td>
+		<td style="white-space: nowrap;">4,378,200</td>
+	</tr>
+	<tr>
+		<td class="stub1">2011Q2</td>
+		<td style="white-space: nowrap;">4,383,200</td>
+	</tr>
+	<tr>
+		<td class="stub1">2011Q3</td>
+		<td style="white-space: nowrap;">4,388,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2011Q4</td>
+		<td style="white-space: nowrap;">4,395,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2012Q1</td>
+		<td style="white-space: nowrap;">4,402,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2012Q2</td>
+		<td style="white-space: nowrap;">4,407,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2012Q3</td>
+		<td style="white-space: nowrap;">4,411,800</td>
+	</tr>
+	<tr>
+		<td class="stub1">2012Q4</td>
+		<td style="white-space: nowrap;">4,420,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2013Q1</td>
+		<td style="white-space: nowrap;">4,430,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2013Q2</td>
+		<td style="white-space: nowrap;">4,439,000</td>
+	</tr>
+	<tr>
+		<td class="stub1">2013Q3</td>
+		<td style="white-space: nowrap;">4,449,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2013Q4</td>
+		<td style="white-space: nowrap;">4,466,800</td>
+	</tr>
+	<tr>
+		<td class="stub1">2014Q1</td>
+		<td style="white-space: nowrap;">4,485,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2014Q2</td>
+		<td style="white-space: nowrap;">4,502,900</td>
+	</tr>
+	<tr>
+		<td class="stub1">2014Q3</td>
+		<td style="white-space: nowrap;">4,520,700</td>
+	</tr>
+	<tr>
+		<td class="stub1">2014Q4</td>
+		<td style="white-space: nowrap;">4,543,100</td>
+	</tr>
+	<tr>
+		<td class="stub1">2015Q1</td>
+		<td style="white-space: nowrap;">4,567,300</td>
+	</tr>
+	<tr>
+		<td class="stub1">2015Q2</td>
+		<td style="white-space: nowrap;">4,588,400</td>
+	</tr>
+	<tr>
+		<td class="footnote" colspan="2">
+			<a id="information">
+				<b>Table information:</b>
+			</a>
+			<br />Units:<br />Number, Magnitude = Units<br /><br /><a id="footnotes"><b>Footnotes:</b></a><br /> <br />Symbols:<br />.. figure not available<br />C: Confidential<br />E: Early Estimate<br />P: Provisional<br />R: Revised<br />S: Suppressed<br /><br />Status flags are not displayed<br /><br />Table reference: <br />DPE059AA<br /><br />Last updated:<br />14 August 2015 10:45am<br /><br />Source: Statistics New Zealand<br />Contact: Information Centre<br />Telephone: 0508 525 525<br />Email:<a href="mailto:info@stats.govt.nz">info@stats.govt.nz</a><br /><br /><br /></td>
+	</tr>
+</table>	</body>
+</html>

@@ -21,3 +21,8 @@ File
 graphdata_inflation.xls
 from 
 http://www.rbnz.govt.nz/statistics/key_graphs/inflation/
+
+File 
+DPE404001_20150914_041710_52.xls
+from
+http://www.stats.govt.nz/infoshare/ViewTable.aspx?pxID=333d8082-79f9-4d1a-99e7-9db48c8b7b69
