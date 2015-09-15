@@ -1,6 +1,7 @@
 # The Real Reason for House Price Inflation in New Zealand
 
-Population growth, shortages in housing supply, internal migration, immigration, cheap money, and foreign investors are just a few of the causes of House Price Inflation (HPI) in New Zealand in recent years. The quintessential example of HPI in action is NZ's largest city - Auckland. The city has experienced double-digit HPI of late with a polarizing effect:
+Population growth, shortages in housing supply, internal migration, immigration, cheap money, and foreign investors are just a few of the claimed causes of House Price Inflation (HPI) in New Zealand in recent years. The notorious example of HPI in action is NZ's largest city - Auckland. The city has experienced double-digit HPI of late with a polarising effect:
+
 * Homeowner delight at increased "equity" 
 * Increasing struggle for renters as disposable income shrinks
 
@@ -10,7 +11,7 @@ Before we dig into the numbers, some definitions are required:
 __M3__: As per RBNZ [1]:
 _The broadest monetary aggregate. Represents all New Zealand dollar funding of M3 institutions. Consists of notes & coin held by the public plus NZ dollar funding minus inter-M3 institutional claims and minus government deposits._
 
-__Inflation__: This needs more than one definition as its a contentious concept. 
+__Inflation__: This needs more than one definition as it is a contentious concept. 
 
 From Wikipedia [2]: _In economics, inflation is a sustained increase in the general price level of goods and services in an economy over a period of time. When the price level rises, each unit of currency buys fewer goods and services. Consequently, inflation reflects a reduction in the purchasing power per unit of money – a loss of real value in the medium of exchange and unit of account within the economy._
 
@@ -24,26 +25,126 @@ _A banking system in which only a fraction of bank deposits are backed by actual
 From Boundless [6]: _Because banks are only required to keep a fraction of their deposits in reserve and may loan out the rest, banks are able to create money. A lower reserve requirement allows banks to issue more loans and increase the money supply, while a higher reserve requirement does the opposite._
 
 
+## What data do we have on various culprits? 
+Data is readily available on the following potential causes for house price inflation:
+
+* population
+* inflation (CPI)
+* M3 (money supply)
+
+There are many other cited potential causes and perhaps scapegoats but they are not discussed in this brief analysis. 
+
+Total residential house value across New Zealand is also a readily available statistic. 
+
+![HPI with all factors](https://raw.githubusercontent.com/simonknudsen/articles/master/images/hpi/value_housing_versus_all.png)
+
+All four data sources are plotted in the above chart. In reality these data series would not be so close on a calibrated y-axis. However, it is useful to plot them together so as to gain a feeling for how closely related these data series may be. First impressions are that all four data series do appear to be similar. 
+
+## Discussion
+Population could be a factor influencing HPI. Population has been growing steadily in NZ for a reasonable period. It would be reasonable to assert that increases in population could also increase demand for housing and force up HPI. However increases in demand for housing would also spur construction and lead to increased supply. 
+
+Inflation as used here may be a bit misleading and also derivative rather than causal. One component used in the derivation of NZ's CPI is HPI. Therefore, it would follow that CPI and HPI should be related somewhat. Inflation is included here for interests sake. 
+
+Money supply (M3) increases as more loans are created to purchase property. Austrian economists, such as Ludwig von Mises, believe money supply expansion alone is responsible for sustained general inflation. 
+
+## Analysis
+In order to determine HPI causality it would be ideal if a metric could be derived from which the potential causes could be ranked. This is no easy task in statistics and certainly not achievable in this  brief analysis. A metric that is readily available is the correlation coefficient. For the time series data available the correlation coefficient will be calculated to try and determine a linear relationship with HPI. 
+
+It would be amiss to the omit the well known statistics mantra:
+> Correlation does not imply causation 
+
+This simply means that strong correlation between two variables does not imply that one caused the other. There may indeed be a third confounding factor linking the two [7]. 
+
+### Preliminary Correlation
+The Pearson correlation coefficient to HPI was derived for all three variables:
+
+Factor                 | Correlation to HPI |
+---------------------- | ------------------ |
+Population             | 0.977667           |
+Inflation<sup>1</sup>  | 0.969346           |
+Money Supply           | 0.989458           |
+
+All three variables derive coefficients close to 1 and therefore imply a strong positive linear relationship with HPI. 
+
+This result is somewhat misleading and the strong correlation is due to a common trend within all three variables and HPI: a near linear increase over time. Population, compound inflation, money supply and HPI all increase with time in the medium to long term. The strong correlation reflects this general trend to increase over time. 
+
+The next task is to remove the increase trend for each data series and try to isolate the underlying similarities. 
+
+<sup>1</sup> _Please note, compound inflation is used with a base date Q1 1988._
+
+### De-Trending 
+For exploring relationships between two or more time series data a more clear picture can be obtained by removing trend from each series [4]. The method to remove trend chosen here is by applying linear regression to each series individually and subtracting the associated derived linear series. 
+
+![HPI and all three factors de-trended](https://raw.githubusercontent.com/simonknudsen/articles/master/images/hpi/detrended_hpi_versus_all.png)
+
+The above chart shows all three factors plotted against HPI once the trends have been removed. M3 & HPI are a much closer fit than population and inflation. 
+
+Using the four de-trended data series, the correlation coefficients are calculated and shown below:
 
 
-## So What Do the Numbers Say?
+Factor            | Correlation to HPI |
+----------------- | ------------------ |
+Population        | 0.5871926          |
+Inflation         | 0.4414522          |
+Money Supply      | 0.8569447          |
 
+It can be concluded inflation and population have a moderate linear relationship with HPI whereas money supply has a strong linear relationship with HPI. Again confounding factors may be involved. 
 
+## Conclusion 
+To be sure the correlation between M3 and HPI is in fact correct lets take another look at the data plotted together: 
 
+![HPI and M3](https://raw.githubusercontent.com/simonknudsen/articles/master/images/hpi/m3_versus_value_housing.png)
 
-https://raw.githubusercontent.com/simonknudsen/articles/master/images/hpi/m3_versus_value_housing.png
+In the chart above HPI seems to be more reactive than M3 which makes rational sense and house prices are determined by purchaser sentiment whereas M3 growth is a downstream result of a decision to borrow. 
+
 
 
 
 ## References
-__[1]__ http://www.rbnz.govt.nz/statistics/tables/c1/ 
+__[1]__ <http://www.rbnz.govt.nz/statistics/tables/c1/>
 
-__[2]__ https://en.wikipedia.org/wiki/Inflation
+__[2]__ <https://en.wikipedia.org/wiki/Inflation>
 
-__[3]__ https://en.wikipedia.org/wiki/Austrian_School#Inflation
+__[3]__ <https://en.wikipedia.org/wiki/Austrian_School#Inflation>
 
-__[4]__ http://svds.com/post/avoiding-common-mistake-time-series
+__[4]__ <http://svds.com/post/avoiding-common-mistake-time-series>
 
-__[5]__ http://www.investopedia.com/terms/f/fractionalreservebanking.asp
+__[5]__ <http://www.investopedia.com/terms/f/fractionalreservebanking.asp>
 
-__[6]__ https://www.boundless.com/economics/textbooks/boundless-economics-textbook/the-monetary-system-27/creating-money-116/the-fractional-reserve-system-455-12552/
+__[6]__ <https://www.boundless.com/economics/textbooks/boundless-economics-textbook/the-monetary-system-27/creating-money-116/the-fractional-reserve-system-455-12552/>
+
+__[7]__ <https://en.wikipedia.org/wiki/Confounding>
+
+## Data Sources
+File 
+Index-2015-09-12 114041368.csv 
+from 
+https://www.qv.co.nz/resources/residential-house-price-index
+
+
+File 
+hc1.xls
+from 
+
+__M3__
+
+Source: <http://www.rbnz.govt.nz/statistics/tables/c1/>
+
+Data File: [hc1.xls](https://raw.githubusercontent.com/simonknudsen/articles/master/data/hpi/hc1.xls)
+
+
+__HOUSE PRICE VALUE & INFLATION__ 
+
+Source: <http://www.rbnz.govt.nz/statistics/key_graphs/house_prices_values/> and <http://www.rbnz.govt.nz/statistics/key_graphs/inflation/>
+
+Data File: [graphdata.xls](https://raw.githubusercontent.com/simonknudsen/articles/master/data/hpi/graphdata.xls)
+
+__POPULATION__
+
+Source: <http://www.stats.govt.nz/infoshare> 
+
+Data File: [DPE404001_20150914_041710_52.xls](https://raw.githubusercontent.com/simonknudsen/articles/master/data/hpi/DPE404001_20150914_041710_52.xls)
+
+
+
+

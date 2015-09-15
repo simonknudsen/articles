@@ -28,6 +28,35 @@ for (i in 2:length(hd$Inflation)) {
 }
 
 ## -----------------
+## Plot all stats together without an axes
+## -----------------
+
+png("value_housing_versus_all.png", width = 800, height = 600)
+plot(hd$Date, hd$M3Billion, axes=FALSE, type="l", lwd=2, col="blue", xlab="", ylab="",
+     main="Housing Value and Three Potential Causes")
+par(new=TRUE)
+plot(hd$Date, hd$ValueHousing, axes=FALSE, type="l", lwd=2, col="chartreuse4", xlab="", ylab="")
+par(new=TRUE)
+plot(hd$Date, hd$Population, axes=FALSE, type="l", lwd=2, col="brown", xlab="", ylab="")
+par(new=TRUE)
+plot(hd$Date, hd$InflationCmpd, axes=FALSE, type="l", lwd=2, col="purple", xlab="", ylab="")
+
+# Date (X) Axis
+axis.Date(side = 1, hd$Date, format = "%d %b %Y",cex.axis=0.75)
+mtext("Date",side=1,col="black",line=2.5, cex = 0.75)  
+
+## Add Legend
+legend("topleft",
+       legend=c("M3","Housing Value", "Population", "Inflation Compound"),
+       lwd=c(1.5,1.5,1.5,1.5),
+       col=c("blue","chartreuse4", "brown", "purple"),
+       cex = 0.75, bty = "n")
+
+dev.off()
+
+
+
+## -----------------
 ## Plot both M3 and Value of Housing on one Graph with Different Y axes
 ## -----------------
 
@@ -69,9 +98,9 @@ cor(hd$InflationCmpd, hd$ValueHousing)
 #skip the first 12 data points from population as we have no data
 cor(tail(hd$Population, -12), tail(hd$ValueHousing, -12))
 
-
 ## -----------------
-## First Differences
+## De-Trending Using First Differences & Link Relatives
+## This did not remove the trend sufficiently 
 ## -----------------
 first_differences <- function(x) {
   return(x - c(0, diff(x)))
@@ -109,45 +138,35 @@ link_relatives(hd$InflationCmpd)
 link_relatives(hd$M3)
 link_relatives(tail(hd$Population, -12))
 
-library("ggplot2")
-ggplot(hd, aes(hd$Date)) + 
-  geom_line(aes(y = ValueHousing, colour = "Vh")) + 
-  geom_line(aes(y = M3, colour = "m3"))
-
-
-## 
-with(hd, cor(1:length(Date), Population))
-first_differences(tail(hd$Population, -12))
-
-
+## -----------------
 ## De-trending function using linear regression
+## -----------------
 detrend_linear_reg <- function(x) {
   lr_f <- lm(formula = x ~ c(1:length(x)))
   x_lr <- lr_f$coefficients[1] + c(1:length(x)) * lr_f$coefficients[2]
   return(x - x_lr)
 }
 
-## De-trending using linear regression
-lr_pop <- lm(formula = hd$Population ~ c(1:length(hd$Population)))
-plot(lr_pop)
-hd$PopulationLR <- lr_pop$coefficients[1] + c(1:length(hd$Population)) * lr_pop$coefficients[2]
-hd$PopulationDT <- hd$Population - hd$PopulationLR
+## --- CHART: All three variables detrended versus HPI 
+png("detrended_hpi_versus_all.png", width = 800, height = 600)
+par(mfrow=c(1, 3))
+plot(hd$Date, detrend_linear_reg(hd$ValueHousing), axes=FALSE, type="l", lwd=2, col="chartreuse4", xlab="", 
+     ylab="", main="Housing Value and M3")
+par(new=TRUE)
+plot(hd$Date, detrend_linear_reg(hd$M3Billion), axes=FALSE, type="l", lwd=2, col="blue", xlab="", ylab="")
 
-plot(hd$Date, hd$Population, type="l")
+plot(hd$Date, detrend_linear_reg(hd$ValueHousing), axes=FALSE, type="l", lwd=2, col="chartreuse4", xlab="", 
+     ylab="", main="Housing Value and Population")
 par(new=TRUE)
-plot(hd$Date, hd$PopulationLR, col = "red", type="l")
-plot(hd$Date, hd$PopulationDT, col = "red", type="l")
-par(new=TRUE)
+plot(hd$Date, detrend_linear_reg(hd$Population), axes=FALSE, type="l", lwd=2, col="brown", xlab="", ylab="")
 
-plot(hd$Date, detrend_linear_reg(hd$Population), type="l")
+plot(hd$Date, detrend_linear_reg(hd$ValueHousing), axes=FALSE, type="l", lwd=2, col="chartreuse4", xlab="", 
+     ylab="", main="Housing Value and Inflation (Compound)")
 par(new=TRUE)
-plot(hd$Date, detrend_linear_reg(hd$M3), col = "green", type="l")
-par(new=TRUE)
-plot(hd$Date, detrend_linear_reg(hd$ValueHousing), col = "red", type="l")
-par(new=TRUE)
-plot(hd$Date, detrend_linear_reg(hd$InflationCmpd), col = "blue", type="l")
+plot(hd$Date, detrend_linear_reg(hd$InflationCmpd), axes=FALSE, type="l", lwd=2, col="purple", xlab="", ylab="")
+dev.off()
 
-
+## Correlation - post de-trending
 pop_dt <- detrend_linear_reg(tail(hd$Population, -12))
 m3_dt <- detrend_linear_reg(hd$M3)
 value_housing_dt <- detrend_linear_reg(hd$ValueHousing)
