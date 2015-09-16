@@ -1,3 +1,5 @@
+![Money Money Money](https://raw.githubusercontent.com/simonknudsen/articles/master/images/hpi/Green-Business-Money.jpg)
+
 # The Real Reason for House Price Inflation in New Zealand
 <p style='text-align: right;'>Simon Knudsen - Sept 2015</p>
 
@@ -28,7 +30,7 @@ _A banking system in which only a fraction of bank deposits are backed by actual
 From Boundless [6]: _Because banks are only required to keep a fraction of their deposits in reserve and may loan out the rest, banks are able to create money. A lower reserve requirement allows banks to issue more loans and increase the money supply, while a higher reserve requirement does the opposite._
 
 
-## What is available on various culprits? 
+## What data is available on various culprits? 
 Data is readily available on the following potential causes for house price inflation:
 
 * population
