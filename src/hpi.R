@@ -1,8 +1,5 @@
-# Read data merged from 3 sources: M3, HPI and CPI
-
+## Read data merged from 3 sources: M3, HPI and CPI
 hd <- read.csv(url("https://raw.githubusercontent.com/simonknudsen/articles/master/data/hpi/merged_data.csv"))
-
-#https://raw.githubusercontent.com/simonknudsen/articles/master/images/hpi/m3_versus_value_housing.png
 
 ## Define an M3 in billions instead of millions
 hd$M3Billion <- hd$M3 / 1000
@@ -15,7 +12,6 @@ hd$Q[hd$Q == "Q 1"] <- "-03-31"
 hd$Q[hd$Q == "Q 2"] <- "-06-30"
 hd$Q[hd$Q == "Q 3"] <- "-09-30"
 hd$Q[hd$Q == "Q 4"] <- "-12-31"
-
 hd$Date <- paste(hd$Year, hd$Q, sep="")
 hd$Date <- as.Date(hd$Date)
 
@@ -30,7 +26,6 @@ for (i in 2:length(hd$Inflation)) {
 ## -----------------
 ## Plot all stats together without an axes
 ## -----------------
-
 png("value_housing_versus_all.png", width = 800, height = 600)
 plot(hd$Date, hd$M3Billion, axes=FALSE, type="l", lwd=2, col="blue", xlab="", ylab="",
      main="Housing Value and Three Potential Causes")
@@ -54,12 +49,9 @@ legend("topleft",
 
 dev.off()
 
-
-
 ## -----------------
 ## Plot both M3 and Value of Housing on one Graph with Different Y axes
 ## -----------------
-
 png("m3_versus_value_housing.png", width = 800, height = 600)
 
 par(mar=c(5, 4, 4, 6) + 0.1)
@@ -125,18 +117,6 @@ par(new=TRUE)
 plot(hd$Date, first_differences(hd$InflationCmpd), col = "blue", type="l")
 par(new=TRUE)
 plot(tail(hd$Date, -12), first_differences(tail(hd$Population, -12)), col = "green", type="l")
-
-
-
-
-plot(hd$Date, link_relatives(hd$M3), type="l")
-par(new=TRUE)
-plot(hd$Date, link_relatives(hd$ValueHousing), col = "red", type="l")
-
-link_relatives(hd$ValueHousing)
-link_relatives(hd$InflationCmpd)
-link_relatives(hd$M3)
-link_relatives(tail(hd$Population, -12))
 
 ## -----------------
 ## De-trending function using linear regression
